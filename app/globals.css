@@ -1,0 +1,31 @@
+:root {
+  --navy:#080E1A;--n2:#0D1526;--n3:#111D33;--n4:#172444;--n5:#1E2F52;
+  --b:rgba(255,255,255,0.06);--b2:rgba(255,255,255,0.11);
+  --teal:#2EC4B6;--td:rgba(46,196,182,0.14);--tg:rgba(46,196,182,0.28);
+  --blue:#3A86FF;--bd:rgba(58,134,255,0.14);
+  --tx:#F0F4FF;--tx2:#8A9BBD;--tx3:#4A5A7A;
+  --ga:#2EC4B6;--gb:#3A86FF;--gc:#F5A623;--gd:#E8634A;
+  --yellow:#F5A623;--red:#E8634A;
+  --fd:'Syne',sans-serif;--fb:'DM Sans',sans-serif;--fm:'DM Mono',monospace;
+  --r:12px;--rs:8px;--rl:16px;
+}
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; width: 100%; overflow-x: hidden; }
+body {
+  font-family: var(--fb);
+  background: var(--navy);
+  color: var(--tx);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Light mode */
+body.light {
+  --navy:#F0F4FA;--n2:#FFFFFF;--n3:#F4F7FB;--n4:#E8EDF5;--n5:#D5DCE8;
+  --b:rgba(0,0,0,0.07);--b2:rgba(0,0,0,0.12);
+  --tx:#0B1526;--tx2:#3A4A66;--tx3:#8A9BBD;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--n5); border-radius: 3px; }
