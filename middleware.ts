@@ -27,8 +27,8 @@ export async function middleware(request: NextRequest) {
   const { data: { user } } = await supabase.auth.getUser()
   const { pathname } = request.nextUrl
 
-  // Public routes
-  if (pathname === '/login' || pathname.startsWith('/api/cron')) {
+  // Public routes — let these through without auth
+  if (pathname === '/login' || pathname.startsWith('/api/')) {
     if (user && pathname === '/login') {
       return NextResponse.redirect(new URL('/dashboard', request.url))
     }
