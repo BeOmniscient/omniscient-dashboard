@@ -199,9 +199,16 @@ export default function ClientDashboard({
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 11 }}>
           {categories.map(cat => (
-            <CatCard key={cat.key} {...cat}
-              weight={CAT_WEIGHT[cat.key]}
-              fixes={fixes.filter(f => f.category === cat.key)} />
+          <CatCard 
+          key={cat.key}
+          label={cat.label}
+          emoji={cat.emoji}
+          score={cat.score}
+          grade={cat.grade}
+          weight={CAT_WEIGHT[cat.key]}
+          fixes={fixes.filter(f => f.category === cat.key)}
+        />
+          
           ))}
         </div>
       </div>
